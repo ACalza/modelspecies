@@ -1,0 +1,20 @@
+{
+  "name": "modelspecies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "modelspecies": "populateDB.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.12.4",
+    "express": "^4.12.4",
+    "fs": "0.0.2",
+    "mongoose": "^4.0.5"
+  }
+}
