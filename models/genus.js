@@ -1,13 +1,8 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var SpeciesSchema = new Schema({
-	species:{
-		type:String,
-		required: true
-	},
+var GenusSchema = new Schema({
 	genus:{
-		type: Schema.Types.ObjectId,
-		ref: 'Genus',
+		type:String,
 		required: true
 	},
 	family:{
@@ -22,12 +17,7 @@ var SpeciesSchema = new Schema({
 	},
 	class:{
 		type: Schema.Types.ObjectId,
-   	 	ref: 'class',
-		required: true
-	},
-	domain: {
-		type: Schema.Types.ObjectId,
-   	 	ref: 'Domain',
+   	 	ref: 'Class',
 		required: true
 	},
 	phylum: {
@@ -35,25 +25,14 @@ var SpeciesSchema = new Schema({
    	 	ref: 'Phylum',
 		required: true
 	},
-	members: {
-		type: [Schema.Types.Mixed]
-	},
-	species: {
-		type: String,
+	domain: {
+		type: Schema.Types.ObjectId,
+   	 	ref: 'Domain',
 		required: true
 	},
-	strain: {
-		type: String
-	},
-	misc: {
-		type: String
-	},
-	genome: {
-		type: String
-	},
-	JSONCreated: {
-		type: String
+	
+	members: {
+		type: [Schema.Types.Mixed]
 	}
 });
-
-module.exports = mongoose.model('Species', SpeciesSchema);
+module.exports = mongoose.model('Genus', GenusSchema);
