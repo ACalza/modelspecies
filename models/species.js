@@ -10,38 +10,6 @@ var SpeciesSchema = new Schema({
 		ref: 'Genus',
 		required: true
 	},
-	family:{
-		type: Schema.Types.ObjectId,
-		ref: 'Family',
-		required: true
-	},
-	order:{
-		type: Schema.Types.ObjectId,
-   	 	ref: 'Order',
-		required: true
-	},
-	class:{
-		type: Schema.Types.ObjectId,
-   	 	ref: 'class',
-		required: true
-	},
-	domain: {
-		type: Schema.Types.ObjectId,
-   	 	ref: 'Domain',
-		required: true
-	},
-	phylum: {
-		type: Schema.Types.ObjectId,
-   	 	ref: 'Phylum',
-		required: true
-	},
-	members: {
-		type: [Schema.Types.Mixed]
-	},
-	species: {
-		type: String,
-		required: true
-	},
 	strain: {
 		type: String
 	},

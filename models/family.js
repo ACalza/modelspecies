@@ -10,21 +10,6 @@ var FamilySchema = new Schema({
    	 	ref: 'Order',
 		required: true
 	},
-	class:{
-		type: Schema.Types.ObjectId,
-   	 	ref: 'Class',
-		required: true
-	},
-	domain: {
-		type: Schema.Types.ObjectId,
-   	 	ref: 'Domain',
-		required: true
-	},
-	phylum: {
-		type: Schema.Types.ObjectId,
-   	 	ref: 'Phylum',
-		required: true
-	},
 	members: {
 		type: [Schema.Types.Mixed]
 	}

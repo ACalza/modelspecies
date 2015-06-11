@@ -6,7 +6,7 @@ var DomainSchema = new Schema({
 		required: true
 	},
 	members: {
-		type: [Schema.Types.Mixed]
+		type: [Schema.Types.ObjectId]
 	}
 });
 module.exports = mongoose.model('Domain', DomainSchema);

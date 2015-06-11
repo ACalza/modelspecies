@@ -5,11 +5,6 @@ var ClassSchema = new Schema({
 		type:String,
 		required:true
 	},
-	domain: {
-		type: Schema.Types.ObjectId,
-   	 	ref: 'Domain',
-		required: true
-	},
 	phylum: {
 		type: Schema.Types.ObjectId,
    	 	ref: 'Phylum',

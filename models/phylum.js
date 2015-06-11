@@ -9,9 +9,9 @@ var PhylumSchema = new Schema({
 	phylum: {
 		type: String,
 		required: true
-	},
+	}
 	members: {
-		type: [Schema.Types.Mixed],
+		type: [Schema.Types.ObjectId],
 		required:true
 	}
 });

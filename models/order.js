@@ -10,16 +10,6 @@ var OrderSchema = new Schema({
    	 	ref: 'Class',
 		required: true
 	},
-	domain: {
-		type: Schema.Types.ObjectId,
-   	 	ref: 'Domain',
-		required: true
-	},
-	phylum: {
-		type: Schema.Types.ObjectId,
-   	 	ref: 'Phylum',
-		required: true
-	},
 	members: {
 		type: [Schema.Types.Mixed]
 	}
