@@ -1,11 +1,11 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var ClassSchema = new Schema({
-	class:{
+	ename:{
 		type:String,
 		required:true
 	},
-	phylum: {
+	cparent: {
 		type: Schema.Types.ObjectId,
    	 	ref: 'Phylum'
 	},

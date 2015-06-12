@@ -1,11 +1,11 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var OrderSchema = new Schema({
-	Order:{
+	ename:{
 		type: String,
 		required:true
 	},
-	class:{
+	cparent:{
 		type: Schema.Types.ObjectId,
    	 	ref: 'Class'
 	},

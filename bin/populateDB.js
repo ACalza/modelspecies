@@ -57,7 +57,15 @@ var data = fs.readFile('../database/modelspecies.csv', 'utf8', function(err, dat
   	  	for(var j=headers.length - 5;j<headers.length;j++){
   			  s[headers[j]] = currentline[j];
   	  	}
-		addSpecie(s, currentline[j-6]);
+		s.ename = currentline[6];
+		g.ename = currentline[5];
+		f.ename = currentline[4];
+		o.ename = currentline[3];
+		c.ename = currentline[2];
+		p.ename = currentline[1];
+		d.ename = currentline[0];
+		
+		addSpecie(s, g, f, o, c, p, d);
 		return;
 		
     }	

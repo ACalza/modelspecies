@@ -1,13 +1,13 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var PhylumSchema = new Schema({
-	domain: {
-		type: Schema.Types.ObjectId,
+	ename: {
+		type: String,
+		required: true,
    	 	ref: 'Domain'
 	},
-	phylum: {
-		type: String,
-		required: true
+	cparent: {
+		type: Schema.Types.ObjectId,
 	},
 	members: {
 		type: [Schema.Types.ObjectId]

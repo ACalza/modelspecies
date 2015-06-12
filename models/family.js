@@ -1,11 +1,11 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var FamilySchema = new Schema({
-	family:{
+	ename:{
 		type:String,
 		required: true
 	},
-	order:{
+	cparent:{
 		type: Schema.Types.ObjectId,
    	 	ref: 'Order'
 	},

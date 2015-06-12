@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var GenusSchema = new Schema({
-	cname:{
+	ename:{
 		type:String,
 		required: true
 	},

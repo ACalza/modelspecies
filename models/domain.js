@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var DomainSchema = new Schema({
-	domain: {
+	ename: {
 		type: String,
 		required: true
 	},
