@@ -7,8 +7,7 @@ var ClassSchema = new Schema({
 	},
 	phylum: {
 		type: Schema.Types.ObjectId,
-   	 	ref: 'Phylum',
-		required: true
+   	 	ref: 'Phylum'
 	},
 	members: {
 		type: [Schema.Types.Mixed]

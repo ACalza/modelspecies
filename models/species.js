@@ -1,14 +1,13 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var SpeciesSchema = new Schema({
-	species:{
+	cname:{
 		type:String,
 		required: true
 	},
-	genus:{
+	cparent:{
 		type: Schema.Types.ObjectId,
-		ref: 'Genus',
-		required: true
+		ref: 'Genus'
 	},
 	strain: {
 		type: String

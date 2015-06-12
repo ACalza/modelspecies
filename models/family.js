@@ -7,8 +7,7 @@ var FamilySchema = new Schema({
 	},
 	order:{
 		type: Schema.Types.ObjectId,
-   	 	ref: 'Order',
-		required: true
+   	 	ref: 'Order'
 	},
 	members: {
 		type: [Schema.Types.Mixed]

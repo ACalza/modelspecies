@@ -7,8 +7,7 @@ var OrderSchema = new Schema({
 	},
 	class:{
 		type: Schema.Types.ObjectId,
-   	 	ref: 'Class',
-		required: true
+   	 	ref: 'Class'
 	},
 	members: {
 		type: [Schema.Types.Mixed]
