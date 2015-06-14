@@ -11,8 +11,10 @@ var Domain = require('../models/domain');
 var addSpecie = require('../lib/species');
 var fs = require('fs');
 
+var block = require('node-block').block;
 var async = require('async');
 //inspired by http://techslides.com/convert-csv-to-json-in-javascript
+
 fs.readFile('../database/modelspecies.csv', 'utf8', function(err, data){
 	if(err){
 		console.log(err);
@@ -43,7 +45,7 @@ fs.readFile('../database/modelspecies.csv', 'utf8', function(err, data){
 		
 		addSpecie(column, function(row){
 			console.log(index);
-			//iterator(index + 1);
+			iterator(index + 1);
 		});
 	}
 	iterator(5);
