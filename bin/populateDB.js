@@ -42,10 +42,12 @@ fs.readFile('../database/modelspecies.csv', 'utf8', function(err, data){
 		column["order"] = currentline[3];
 		column["family"] = currentline[4];
 		column["genus"] = currentline[5];
-		
+	
+                console.log(column);
+
 		addSpecie(column, function(row){
 			console.log(index);
-			iterator(index + 1);
+			//iterator(index + 1);
 		});
 	}
 	iterator(5);
