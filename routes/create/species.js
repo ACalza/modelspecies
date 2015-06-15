@@ -104,24 +104,7 @@ var addSpecieRecursion = function(row, savedChildModel) {
 //It'll break if you dont passs in the right column paramaters for the row
 //Easy fix, we'd simply check the prototpes so no one fucks with our DB.
 //CBA right now to do it.
-var addSpecie = function(row) {
-    var specie = new Species({
-        ename: row["species"],
-        strain: row["strain"],
-        misc: row["misc"],
-        genome: row["genome"],
-        JSONCreated: row["JSONCreated"]
-    });
-    row.columnsToBeFilled = columnOrder;
-
-    specie.save(function(err, savedSpecie) {
-        addSpecieRecursion(row, savedSpecie);
-        res.send('added');
-    });
-
-}
-
-var getRow = function(req, res, next) {
+var addSpecie = function(req, res, next) {
     var row = {};
     row.species = req.body.species;
     row.strain = req.body.strain;
@@ -132,22 +115,24 @@ var getRow = function(req, res, next) {
     row.class = req.body.class;
     row.order = req.body.order;
     row.family = req.body.family;
-    row.genus = req.body.genus;
+    row.genus = req.body.genus;    
+    
+    var specie = new Species({
+        ename: row['species'],
+        strain: row['strain'],
+        misc: row['misc'],
+        genome: row['genome'],
+        JSONCreated: row['JSONCreated']
+    });
+    
+    row.columnsToBeFilled = columnOrder;
 
-    req.igem = {
-        row: row
-    }
-    next()
-};
-
-var executeAddRow = function(req, res, next) {
-    addSpecie(req.igem.row);
-    //res.send(req.igem.row);
+    specie.save(function(err, savedSpecie) {
+        addSpecieRecursion(row, savedSpecie);
+        res.send('Successfully saved ' + req.body.species + '\n');
+    });
 }
 
-router.post('/create/specie',
-    getRow,
-    executeAddRow
-)
+router.post('/create/specie',addSpecie)
 
 module.exports = router;
