@@ -10,5 +10,5 @@ species=`ls species | grep \.*\.json`
 
 for specie in $species
 do
-    curl -X $method $url --data "@species/$specie" --header $header
+    curl -X $method $url --data "@species/$specie" --header "$header"
 done
